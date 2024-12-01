@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div id="toolbar">
+    <div class="toolbar-group">
+      <input type="color" id="colorPicker" title="Color Picker">
+      <div class="divider">|</div>
+      <button id="brush" title="Brush"><span class="material-icons">create</span></button>
+      <button id="eraser" title="Eraser"><span class="material-icons">backspace</span></button>
+    </div>
+    <div class="divider">|</div>
+    <div class="toolbar-group">
+      <button id="undo" title="Undo"><span class="material-icons">undo</span></button>
+      <button id="redo" title="Redo"><span class="material-icons">redo</span></button>
+    </div>
+    <div class="divider">|</div>
+    <div class="toolbar-group">
+      <span class="material-icons">brush</span>
+      <input type="number" id="brushSizeValue" min="1" max="1000" value="5">
+    </div>
+    <div class="divider">|</div>
+    <div class="toolbar-group">
+      <button id="newCanvas" title="New Canvas"><span class="material-icons">note_add</span></button>
+      <div class="divider">|</div>
+      <button id="export" title="Export">
+        <span class="material-icons">file_download</span>
+      </button>
+      <div id="exportDropdown" class="dropdown-content">
+        <button data-type="png">PNG</button>
+        <button data-type="jpeg">JPEG</button>
+      </div>
+    </div>
+    <div class="divider">|</div>
+    <div class="toolbar-group">
+      <button id="canvasSettings" title="Canvas Settings">
+        <span class="material-icons">settings</span>
+      </button>
+      <div id="canvasSettingsDropdown" class="settings-modal">
+        <div class="settings-content">
+          <h3>Canvas Settings</h3>
+          <div class="settings-group">
+            <label>Width (px): <input type="number" id="canvasWidth" min="1" max="500" value="500"></label>
+            <label>Height (px): <input type="number" id="canvasHeight" min="1" max="500" value="500"></label>
+            <small>Maximum size: 500x500 pixels</small>
+            <button id="applySize">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <canvas id="paintCanvas" width="500" height="500"></canvas>
+  <script src="popup.js"></script>
+</body>
+</html>

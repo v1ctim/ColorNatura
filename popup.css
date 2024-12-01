@@ -1,0 +1,247 @@
+#toolbar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  padding: 4px 8px;
+  height: 32px;
+}
+
+.toolbar-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.divider {
+  color: #ccc;
+  margin: 0 8px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#toolbar input[type="color"] {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#toolbar button {
+  height: 24px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: system-ui;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#toolbar button:hover {
+  background: #e6e6e6;
+}
+
+#toolbar input[type="range"] {
+  width: 80px;
+}
+
+#toolbar input[type="number"] {
+  width: 50px;
+  height: 22px;
+  padding: 0 4px;
+}
+
+#toolbar input[type="file"] {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  margin-top: 8px;
+}
+
+.material-icons {
+  font-size: 18px;
+  color: #333;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.import-label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.import-label:hover {
+  background: #e6e6e6;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 1000;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 2px 0;
+}
+
+.dropdown-content button:hover {
+  background-color: #f0f0f0;
+}
+
+.show {
+  display: block;
+}
+
+/* Position the dropdown relative to the export button */
+#export {
+  position: relative;
+}
+
+#exportDropdown {
+  display: none;
+  position: absolute;
+  top: 30px; /* Height of toolbar button + padding */
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 120px;
+  padding: 4px;
+  z-index: 9999;
+}
+
+#exportDropdown.show {
+  display: block;
+}
+
+#exportDropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+#exportDropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-group input[type="number"] {
+  width: 80px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Add red border when value exceeds max */
+.settings-group input[type="number"]:invalid {
+  border-color: #dc3545;
+}
+
+#canvasWidth, #canvasHeight {
+  max-width: 80px;
+}
+
+.settings-group small {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+#applySize {
+  margin-top: 10px;
+  padding: 8px;
+  background: #007bff;
+  color: rgb(20, 20, 20);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#applySize:hover {
+  background: #0056b3;
+}
+
+.settings-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 10000;
+  min-width: 250px;
+}
+
+.settings-modal h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
